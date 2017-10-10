@@ -74,3 +74,17 @@ nav a:hover{
 .row {
   margin-bottom: 0;
 }
+
+.dFlex {
+ display: flex;
+ justify-content: space-between;
+ font-size: 14.5px !important;
+}
+
+/*.pad {
+ padding-left: 0;
+ padding-right: 25px;
+}*/
+
+.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
+  color: white; }

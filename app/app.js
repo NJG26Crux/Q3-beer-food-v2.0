@@ -33,7 +33,7 @@ const yummly = require('./routes/yummly');
 // app.use(favs);
 // app.use(food_recipies);
 // app.use(ratings);
-// app.use(token);
+app.use(token);
 app.use(users);
 // app.use(yummly);
 

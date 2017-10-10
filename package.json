@@ -21,6 +21,7 @@
   "dependencies": {
     "angular": "^1.6.6",
     "angular-ui-router": "^0.4.3",
+    "axios": "^0.16.2",
     "bcrypt-as-promised": "^1.1.0",
     "body-parser": "^1.18.2",
     "boom": "^6.0.0",
