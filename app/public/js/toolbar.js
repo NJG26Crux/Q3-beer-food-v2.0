@@ -1,5 +1,5 @@
 
 angular
-  .module('app',['ngMaterial']) //, 'ngMessages', 'material.svgAssetsCache'
-  .controller('AppCtrl', function($scope) {
+  .module('app') //, 'ngMessages', 'material.svgAssetsCache'
+  .controller('toolbar', function($scope) {
 });

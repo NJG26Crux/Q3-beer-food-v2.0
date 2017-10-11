@@ -12,11 +12,12 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
   <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-animate.min.js"></script>
   <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-aria.min.js"></script>
-  <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script> -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
   <script defer src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
   <script defer src="js/lftSideNav.js"></script>
-  <!-- <script defer src="js/toolbar.js"></script> -->
+  <script defer src="js/toolbar.js"></script>
+
 
 </head>
 
@@ -38,6 +39,40 @@
         </ul>
       </div>
     </nav> -->
+
+    <div ng-controller="toolbar" ng-cloak ng-app="app">
+      <md-content>
+
+        <div layout="column" layout-fill>
+          <md-toolbar>
+
+            <div class="md-toolbar-tools">
+
+              <div layout="row" layout-align="center center">
+                <h2 md-truncate flex>My App's Title centered?</h2>
+              </div>
+
+              <md-button>
+                Right Bar Button
+              </md-button>
+              <md-button>
+                Right Bar Button 2
+              </md-button>
+              <md-button>
+                Right Bar Button 3
+              </md-button>
+
+            </div>
+
+          </md-toolbar>
+
+          <md-content>
+            Hello!!!
+          </md-content>
+        </div>
+
+      </md-content>
+    </div>
 
     <!-- <md-toolbar>
       <div class="md-toolbar-tools">
@@ -68,65 +103,7 @@
 
       <div class="row">
         <!-- //*********** -->
-        <div ng-controller="AppCtrl" layout="column" style="height: 500px;" ng-cloak="" class="sidenavdemoCustomSidenav" ng-app="MyApp">
-          <section layout="row" flex="">
-            <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
-              <md-toolbar class="md-theme-indigo">
-                <h1 class="md-toolbar-tools">Beer Search</h1>
-              </md-toolbar>
-              <md-content layout-margin="">
-                <form novalidate name="postForm" ng-submit="$ctrl.submitPost()">
-
-                  <div class="formField dFlex" ng-class="{'has-error': postForm.id.$invalid && postForm.id.$touched,'has-success': postForm.id.$valid,}">
-                    <label for="id">Id:</label>
-                    <input type="number" name="id" class="form-control" required ng-minlength="1" ng-maxlength="4" ng-model="$ctrl.post.id" ng-model-options="{ updateOn: 'blur' }" />
-                    <div class="error-container" ng-show="postForm.id.$dirty && postForm.id.$invalid">
-                      <!-- <small class="error" ng-show="postForm.id.$error.required">Please input a Id</small> -->
-                      <small class="error" ng-show="postForm.id.$error.minlength">Id is required to be at least 1 characters</small>
-                      <small class="error" ng-show="postForm.id.$error.maxlength">Id cannot be longer than 4 characters</small>
-                    </div>
-                  </div>
-
-                  <div class="formField dFlex" ng-class="{'has-error': postForm.name.$invalid && postForm.name.$touched,'has-success': postForm.name.$valid,}">
-                    <label for="name">Name:</label>
-                    <input id="name" type="text" class="form-control" required ng-minlength="3" ng-model="$ctrl.post.name" ng-model-options="{ updateOn: 'blur' }"></input>
-                    <div class="error-container" ng-show="postForm.name.$dirty && postForm.name.$invalid">
-                      <small class="error" ng-show="postForm.name.$error.required">Please input a Name</small>
-                      <small class="error" ng-show="postForm.name.$error.minlength">Name is required to be at least 3 characters</small>
-                      <!-- <small class="error" ng-show="postForm.body.$error.maxlength">Title cannot be longer than 20 characters</small> -->
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-primary formField" ng-disabled="postForm.$invalid">
-                      Search
-                    </button>
-                  </div>
-
-                </form>
-                <p>
-                  This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
-                </p>
-                <md-button ng-click="toggleLeft()" class="md-accent">
-                  Close this Sidenav
-                </md-button>
-              </md-content>
-            </md-sidenav>
-            <md-content flex="" layout-padding="">
-              <div layout="column" layout-align="top center">
-                <h1>Hello World</h1>
-                <p>
-                  Developers can also disable the backdrop of the sidenav.<br> This will disable the functionality to click outside to close the sidenav.
-                </p>
-                <div>
-                  <md-button ng-click="toggleLeft()" class="md-raised">
-                    Toggle Sidenav
-                  </md-button>
-                </div>
-              </div>
-            </md-content>
-          </section>
-        </div>
+        <left-side-nav></left-side-nav>
         <!-- //*************** -->
       </div>
     </div>
