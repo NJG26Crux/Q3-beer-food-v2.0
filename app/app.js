@@ -29,7 +29,7 @@ const users = require('./routes/users');
 const yummly = require('./routes/yummly');
 
 // app.use(beer_recipies);
-// app.use(brewdog);
+app.use(brewdog);
 // app.use(favs);
 // app.use(food_recipies);
 // app.use(ratings);

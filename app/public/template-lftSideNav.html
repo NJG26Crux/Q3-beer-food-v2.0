@@ -7,7 +7,7 @@
       <md-content layout-margin="">
 
         <!--************************ -->
-        <form novalidate name="searchBeer" ng-submit="$ctrl.searchBeer()"> <!--$ctrl.-->
+        <form novalidate name="searchBeer" ng-submit="$ctrl.beerSearch()"> <!--$ctrl.-->
 
           <div class="formField dFlex" ng-class="{'has-error': searchBeer.id.$invalid && searchBeer.id.$touched,'has-success': searchBeer.id.$valid,}">
             <label for="id">Id :</label>
