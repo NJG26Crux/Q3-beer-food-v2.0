@@ -11,7 +11,7 @@
 
           <div class="formField dFlex" ng-class="{'has-error': searchBeer.id.$invalid && searchBeer.id.$touched,'has-success': searchBeer.id.$valid,}">
             <label for="id">Id :</label>
-            <input type="number" name="id" class="form-control" required ng-minlength="1" ng-maxlength="4" ng-model="$ctrl.post.id" ng-model-options="{ updateOn: 'blur' }" />
+            <input type="number" name="id" class="form-control" required ng-minlength="1" ng-maxlength="4" ng-model="$ctrl.searchBeer.id" ng-model-options="{ updateOn: 'blur' }" />
             <div class="error-container" ng-show="searchBeer.id.$dirty && searchBeer.id.$invalid">
               <!-- <small class="error" ng-show="searchBeer.id.$error.required">Please input a Id</small> -->
               <small class="error" ng-show="searchBeer.id.$error.minlength">Id is required to be at least 1 characters</small>
@@ -21,7 +21,7 @@
 
           <div class="formField dFlex" ng-class="{'has-error': searchBeer.name.$invalid && searchBeer.name.$touched,'has-success': searchBeer.name.$valid,}">
             <label for="name">Name :</label>
-            <input id="name" type="text" class="form-control" required ng-minlength="3" ng-model="$ctrl.post.name" ng-model-options="{ updateOn: 'blur' }"></input>
+            <input id="name" type="text" class="form-control" required ng-minlength="3" ng-model="$ctrl.searchBeer.name" ng-model-options="{ updateOn: 'blur' }"></input>
             <div class="error-container" ng-show="searchBeer.name.$dirty && searchBeer.name.$invalid">
               <small class="error" ng-show="searchBeer.name.$error.required">Please input a Name</small>
               <small class="error" ng-show="searchBeer.name.$error.minlength">Name is required to be at least 3 characters</small>
@@ -29,92 +29,92 @@
             </div>
           </div>
 
-          <div class="formField dFlex" ng-class="{'has-error': searchBeer.id.$invalid && searchBeer.id.$touched,'has-success': searchBeer.id.$valid,}">
+          <div class="formField dFlex" ng-class="{'has-error': searchBeer.abvgt.$invalid && searchBeer.abvgt.$touched,'has-success': searchBeer.abvgt.$valid,}">
             <label for="id">ABV &#62 :</label>
-            <input type="number" name="ABVgt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.post.id" ng-model-options="{ updateOn: 'blur' }" />
-            <div class="error-container" ng-show="searchBeer.id.$dirty && searchBeer.id.$invalid">
-              <!-- <small class="error" ng-show="searchBeer.id.$error.required">Please input a Id</small> -->
-              <small class="error" ng-show="searchBeer.id.$error.minlength">ABV&#62 is required to be at least 1 characters</small>
-              <small class="error" ng-show="searchBeer.id.$error.maxlength">ABV&#62 cannot be longer than 2 characters</small>
+            <input type="number" name="ABVgt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.searchBeer.abvgt" ng-model-options="{ updateOn: 'blur' }" />
+            <div class="error-container" ng-show="searchBeer.abvgt.$dirty && searchBeer.abvgt.$invalid">
+              <!-- <small class="error" ng-show="searchBeer.abvgt.$error.required">Please input a Id</small> -->
+              <small class="error" ng-show="searchBeer.abvgt.$error.minlength">ABV&#62 is required to be at least 1 characters</small>
+              <small class="error" ng-show="searchBeer.abvgt.$error.maxlength">ABV&#62 cannot be longer than 2 characters</small>
             </div>
           </div>
 
-          <div class="formField dFlex" ng-class="{'has-error': searchBeer.id.$invalid && searchBeer.id.$touched,'has-success': searchBeer.id.$valid,}">
+          <div class="formField dFlex" ng-class="{'has-error': searchBeer.abvlt.$invalid && searchBeer.abvlt.$touched,'has-success': searchBeer.abvlt.$valid,}">
             <label for="id">ABV &#60 :</label>
-            <input type="number" name="ABVlt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.post.id" ng-model-options="{ updateOn: 'blur' }" />
-            <div class="error-container" ng-show="searchBeer.id.$dirty && searchBeer.id.$invalid">
-              <!-- <small class="error" ng-show="searchBeer.id.$error.required">Please input a Id</small> -->
-              <small class="error" ng-show="searchBeer.id.$error.minlength">ABV&#60 is required to be at least 1 characters</small>
-              <small class="error" ng-show="searchBeer.id.$error.maxlength">ABV&#60 cannot be longer than 2 characters</small>
+            <input type="number" name="ABVlt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.searchBeer.abvlt" ng-model-options="{ updateOn: 'blur' }" />
+            <div class="error-container" ng-show="searchBeer.abvlt.$dirty && searchBeer.abvlt.$invalid">
+              <!-- <small class="error" ng-show="searchBeer.abvlt.$error.required">Please input a Id</small> -->
+              <small class="error" ng-show="searchBeer.abvlt.$error.minlength">ABV&#60 is required to be at least 1 characters</small>
+              <small class="error" ng-show="searchBeer.abvlt.$error.maxlength">ABV&#60 cannot be longer than 2 characters</small>
             </div>
           </div>
 
-          <div class="formField dFlex" ng-class="{'has-error': searchBeer.id.$invalid && searchBeer.id.$touched,'has-success': searchBeer.id.$valid,}">
+          <div class="formField dFlex" ng-class="{'has-error': searchBeer.ibugt.$invalid && searchBeer.ibugt.$touched,'has-success': searchBeer.ibugt.$valid,}">
             <label for="id">IBU &#62 :</label>
-            <input type="number" name="IBUgt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.post.id" ng-model-options="{ updateOn: 'blur' }" />
-            <div class="error-container" ng-show="searchBeer.id.$dirty && searchBeer.id.$invalid">
-              <!-- <small class="error" ng-show="searchBeer.id.$error.required">Please input a Id</small> -->
-              <small class="error" ng-show="searchBeer.id.$error.minlength">IBU&#62 is required to be at least 1 characters</small>
-              <small class="error" ng-show="searchBeer.id.$error.maxlength">IBU&#62 cannot be longer than 2 characters</small>
+            <input type="number" name="IBUgt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.searchBeer.ibugt" ng-model-options="{ updateOn: 'blur' }" />
+            <div class="error-container" ng-show="searchBeer.ibugt.$dirty && searchBeer.ibugt.$invalid">
+              <!-- <small class="error" ng-show="searchBeer.ibugt.$error.required">Please input a Id</small> -->
+              <small class="error" ng-show="searchBeer.ibugt.$error.minlength">IBU&#62 is required to be at least 1 characters</small>
+              <small class="error" ng-show="searchBeer.ibugt.$error.maxlength">IBU&#62 cannot be longer than 2 characters</small>
             </div>
           </div>
 
-          <div class="formField dFlex" ng-class="{'has-error': searchBeer.id.$invalid && searchBeer.id.$touched,'has-success': searchBeer.id.$valid,}">
+          <div class="formField dFlex" ng-class="{'has-error': searchBeer.ibult.$invalid && searchBeer.ibult.$touched,'has-success': searchBeer.ibult.$valid,}">
             <label for="id">IBU &#60 :</label>
-            <input type="number" name="IBUlt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.post.id" ng-model-options="{ updateOn: 'blur' }" />
-            <div class="error-container" ng-show="searchBeer.id.$dirty && searchBeer.id.$invalid">
-              <!-- <small class="error" ng-show="searchBeer.id.$error.required">Please input a Id</small> -->
-              <small class="error" ng-show="searchBeer.id.$error.minlength">IBU&#60 is required to be at least 1 characters</small>
-              <small class="error" ng-show="searchBeer.id.$error.maxlength">IBU&#60 cannot be longer than 2 characters</small>
+            <input type="number" name="IBUlt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.searchBeer.ibult" ng-model-options="{ updateOn: 'blur' }" />
+            <div class="error-container" ng-show="searchBeer.ibult.$dirty && searchBeer.ibult.$invalid">
+              <!-- <small class="error" ng-show="searchBeer.ibult.$error.required">Please input a Id</small> -->
+              <small class="error" ng-show="searchBeer.ibult.$error.minlength">IBU&#60 is required to be at least 1 characters</small>
+              <small class="error" ng-show="searchBeer.ibult.$error.maxlength">IBU&#60 cannot be longer than 2 characters</small>
             </div>
           </div>
 
-          <div class="formField dFlex" ng-class="{'has-error': searchBeer.id.$invalid && searchBeer.id.$touched,'has-success': searchBeer.id.$valid,}">
+          <div class="formField dFlex" ng-class="{'has-error': searchBeer.ebcgt.$invalid && searchBeer.ebcgt.$touched,'has-success': searchBeer.ebcgt.$valid,}">
             <label for="id">EBC &#62 :</label>
-            <input type="number" name="IBUgt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.post.id" ng-model-options="{ updateOn: 'blur' }" />
-            <div class="error-container" ng-show="searchBeer.id.$dirty && searchBeer.id.$invalid">
-              <!-- <small class="error" ng-show="searchBeer.id.$error.required">Please input a Id</small> -->
-              <small class="error" ng-show="searchBeer.id.$error.minlength">EBC&#62 is required to be at least 1 characters</small>
-              <small class="error" ng-show="searchBeer.id.$error.maxlength">EBC&#62 cannot be longer than 2 characters</small>
+            <input type="number" name="EBCgt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.searchBeer.ebcgt" ng-model-options="{ updateOn: 'blur' }" />
+            <div class="error-container" ng-show="searchBeer.ebcgt.$dirty && searchBeer.ebcgt.$invalid">
+              <!-- <small class="error" ng-show="searchBeer.ebcgt.$error.required">Please input a Id</small> -->
+              <small class="error" ng-show="searchBeer.ebcgt.$error.minlength">EBC&#62 is required to be at least 1 characters</small>
+              <small class="error" ng-show="searchBeer.ebcgt.$error.maxlength">EBC&#62 cannot be longer than 2 characters</small>
             </div>
           </div>
 
-          <div class="formField dFlex" ng-class="{'has-error': searchBeer.id.$invalid && searchBeer.id.$touched,'has-success': searchBeer.id.$valid,}">
+          <div class="formField dFlex" ng-class="{'has-error': searchBeer.ebclt.$invalid && searchBeer.ebclt.$touched,'has-success': searchBeer.ebclt.$valid,}">
             <label for="id">EBC &#60 :</label>
-            <input type="number" name="IBUlt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.post.id" ng-model-options="{ updateOn: 'blur' }" />
-            <div class="error-container" ng-show="searchBeer.id.$dirty && searchBeer.id.$invalid">
-              <!-- <small class="error" ng-show="searchBeer.id.$error.required">Please input a Id</small> -->
-              <small class="error" ng-show="searchBeer.id.$error.minlength">EBC&#60 is required to be at least 1 characters</small>
-              <small class="error" ng-show="searchBeer.id.$error.maxlength">EBC&#60 cannot be longer than 2 characters</small>
+            <input type="number" name="EBClt" class="form-control" required ng-minlength="1" ng-maxlength="2" ng-model="$ctrl.searchBeer.ebclt" ng-model-options="{ updateOn: 'blur' }" />
+            <div class="error-container" ng-show="searchBeer.ebclt.$dirty && searchBeer.ebclt.$invalid">
+              <!-- <small class="error" ng-show="searchBeer.ebclt.$error.required">Please input a Id</small> -->
+              <small class="error" ng-show="searchBeer.ebclt.$error.minlength">EBC&#60 is required to be at least 1 characters</small>
+              <small class="error" ng-show="searchBeer.ebclt.$error.maxlength">EBC&#60 cannot be longer than 2 characters</small>
             </div>
           </div>
 
-          <div class="formField dFlex" ng-class="{'has-error': searchBeer.name.$invalid && searchBeer.name.$touched,'has-success': searchBeer.name.$valid,}">
+          <div class="formField dFlex" ng-class="{'has-error': searchBeer.yeast.$invalid && searchBeer.yeast.$touched,'has-success': searchBeer.yeast.$valid,}">
             <label for="name">Yeast :</label>
-            <input id="name" type="text" class="form-control" required ng-minlength="3" ng-model="$ctrl.post.name" ng-model-options="{ updateOn: 'blur' }"></input>
-            <div class="error-container" ng-show="searchBeer.name.$dirty && searchBeer.name.$invalid">
-              <small class="error" ng-show="searchBeer.name.$error.required">Please input a Name for Yeast</small>
-              <small class="error" ng-show="searchBeer.name.$error.minlength">Yeast Name is required to be at least 3 characters</small>
+            <input id="name" type="text" class="form-control" required ng-minlength="3" ng-model="$ctrl.searchBeer.yeast" ng-model-options="{ updateOn: 'blur' }"></input>
+            <div class="error-container" ng-show="searchBeer.yeast.$dirty && searchBeer.yeast.$invalid">
+              <small class="error" ng-show="searchBeer.yeast.$error.required">Please input a Name for Yeast</small>
+              <small class="error" ng-show="searchBeer.yeast.$error.minlength">Yeast Name is required to be at least 3 characters</small>
               <!-- <small class="error" ng-show="searchBeer.body.$error.maxlength">Title cannot be longer than 20 characters</small> -->
             </div>
           </div>
 
-          <div class="formField dFlex" ng-class="{'has-error': searchBeer.name.$invalid && searchBeer.name.$touched,'has-success': searchBeer.name.$valid,}">
+          <div class="formField dFlex" ng-class="{'has-error': searchBeer.hops.$invalid && searchBeer.hops.$touched,'has-success': searchBeer.hops.$valid,}">
             <label for="name">Hops :</label>
-            <input id="name" type="text" class="form-control" required ng-minlength="3" ng-model="$ctrl.post.name" ng-model-options="{ updateOn: 'blur' }"></input>
-            <div class="error-container" ng-show="searchBeer.name.$dirty && searchBeer.name.$invalid">
-              <small class="error" ng-show="searchBeer.name.$error.required">Please input a Name for Hops</small>
-              <small class="error" ng-show="searchBeer.name.$error.minlength">Hops Name is required to be at least 3 characters</small>
+            <input id="name" type="text" class="form-control" required ng-minlength="3" ng-model="$ctrl.searchBeer.hops" ng-model-options="{ updateOn: 'blur' }"></input>
+            <div class="error-container" ng-show="searchBeer.hops.$dirty && searchBeer.hops.$invalid">
+              <small class="error" ng-show="searchBeer.hops.$error.required">Please input a Name for Hops</small>
+              <small class="error" ng-show="searchBeer.hops.$error.minlength">Hops Name is required to be at least 3 characters</small>
               <!-- <small class="error" ng-show="searchBeer.body.$error.maxlength">Title cannot be longer than 20 characters</small> -->
             </div>
           </div>
 
-          <div class="formField dFlex" ng-class="{'has-error': searchBeer.name.$invalid && searchBeer.name.$touched,'has-success': searchBeer.name.$valid,}">
+          <div class="formField dFlex" ng-class="{'has-error': searchBeer.malt.$invalid && searchBeer.malt.$touched,'has-success': searchBeer.malt.$valid,}">
             <label for="name">Malt :</label>
-            <input id="name" type="text" class="form-control" required ng-minlength="3" ng-model="$ctrl.post.name" ng-model-options="{ updateOn: 'blur' }"></input>
-            <div class="error-container" ng-show="searchBeer.name.$dirty && searchBeer.name.$invalid">
-              <small class="error" ng-show="searchBeer.name.$error.required">Please input a Name for Malt</small>
-              <small class="error" ng-show="searchBeer.name.$error.minlength">Malt Name is required to be at least 3 characters</small>
+            <input id="name" type="text" class="form-control" required ng-minlength="3" ng-model="$ctrl.searchBeer.malt" ng-model-options="{ updateOn: 'blur' }"></input>
+            <div class="error-container" ng-show="searchBeer.malt.$dirty && searchBeer.malt.$invalid">
+              <small class="error" ng-show="searchBeer.malt.$error.required">Please input a Name for Malt</small>
+              <small class="error" ng-show="searchBeer.malt.$error.minlength">Malt Name is required to be at least 3 characters</small>
               <!-- <small class="error" ng-show="searchBeer.body.$error.maxlength">Title cannot be longer than 20 characters</small> -->
             </div>
           </div>

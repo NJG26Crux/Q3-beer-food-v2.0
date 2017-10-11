@@ -32,6 +32,7 @@ angular.module('app')
        };
      }
      vm.searchBeer = function () {
+       
        console.log ('I have been searched');
      }
   },

@@ -10,9 +10,9 @@ const axios = require('axios');
 
 module.exports = router;
 
-router.get('/jobs', (req, res, next) => {
+router.get('/beers', (req, res, next) => {
 
-  axios.get(`http://service.dice.com/api/rest/jobsearch/v1/simple.json?text=${req.query.title}&city=${req.query.location}`)
+  axios.get(`https://api.punkapi.com/v2/beers?${searchString}`)
   .then((resp) => {
     res.send(resp.data);
   })
@@ -20,3 +20,6 @@ router.get('/jobs', (req, res, next) => {
     next(err)
   })
 });
+
+
+// var $xhr = $.getJSON(`https://api.punkapi.com/v2/beers?${searchString}`);
