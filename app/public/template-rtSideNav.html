@@ -24,11 +24,11 @@
       <md-content layout-margin="">
 
         <!--************************ -->
-        <form novalidate name="searchFood" ng-submit="$ctrl.searchFood()"> <!--$ctrl.-->
+        <form novalidate name="searchFood" ng-submit="$ctrl.foodSearch()"> <!--$ctrl.-->
 
           <div class="formField dFlex" ng-class="{'has-error': searchFood.name.$invalid && searchFood.name.$touched,'has-success': searchFood.name.$valid,}">
             <label for="name">Name :</label>
-            <input id="name" type="text" class="form-control" required ng-minlength="3" ng-model="$ctrl.post.name" ng-model-options="{ updateOn: 'blur' }"></input>
+            <input id="name" type="text" class="form-control" required ng-minlength="3" ng-model="$ctrl.searchFood.name" ng-model-options="{ updateOn: 'blur' }"></input>
             <div class="error-container" ng-show="searchFood.name.$dirty && searchFood.name.$invalid">
               <small class="error" ng-show="searchFood.name.$error.required">Please input a Name</small>
               <small class="error" ng-show="searchFood.name.$error.minlength">Name is required to be at least 3 characters</small>
@@ -39,7 +39,7 @@
 
 
           <div class="form-group">
-            <button type="submit" class="btn btn-primary formField"> <!-- ng-disabled="searchBeer.$invalid"-->
+            <button type="submit" class="btn btn-primary formField" ng-disabled="searchFood.$invalid">
               Search
             </button>
           </div>
