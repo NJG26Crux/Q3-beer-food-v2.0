@@ -79,7 +79,8 @@ angular.module('app')
        console.log (searchString);
 
        $http.get(`/beers?search=${searchString}`).then(function(data) {
-         console.log(data);
+         vm.data = data.data;
+         console.log(vm.data.data[0]);
        });
      }
   },
