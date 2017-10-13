@@ -80,7 +80,7 @@ angular.module('app')
 
        $http.get(`/beers?search=${searchString}`).then(function(data) {
          vm.data = data.data;
-         console.log(vm.data.data[0]);
+         console.log(vm.data);
        });
      }
   },
