@@ -11,7 +11,7 @@
 
       vm.getRecipes = function(recipe){
         $http.get(`/recipes?searchString=${recipe}`).then(function(data) {
-          vm.recipes = data.data;
+          vm.recipes = data.data.matches;
           console.log(vm.recipes);
         });
       }
