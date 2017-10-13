@@ -8,6 +8,9 @@
         <p>
           Developers can also disable the backdrop of the sidenav.<br> This will disable the functionality to click outside to close the sidenav.
         </p>
+
+        
+        {{$ctrl.recipes | json}}
         <div>
           <md-button ng-click="$ctrl.toggleLeft()" class="md-raised">
             Toggle Right Sidenav
@@ -50,6 +53,8 @@
         <p>
           Please type a main ingredient then click Search to see a list of Dishes containing that ingredient.
         </p>
+        here
+        <food-list foods="$ctrl.dishes"></food-list> <!--this is where it happens-->
         <md-button ng-click="$ctrl.toggleLeft()" class="md-accent">
           Close this Sidenav
         </md-button>

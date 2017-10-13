@@ -35,7 +35,7 @@ app.use(brewdog);
 // app.use(ratings);
 app.use(token);
 app.use(users);
-// app.use(yummly);
+app.use(yummly);
 
 app.use('*', function(req, res, next) {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')})
