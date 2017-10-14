@@ -1,15 +1,21 @@
+<!-- <h1>Hello Roger</h1>
+
+{{$ctrl.recipes}} -->
+
 <ang-accordion one-at-a-time="true">
-  <collapsible-item ng-repeat="recipe in $ctrl.recipies" item-title={{recipe.recipeName}}>
-    <!-- <div>first_brewed    : {{beer.first_brewed    }}</div>
-    <div>contributed_by:     {{beer.contributed_by}}</div>
-    <div>image_url:    {{beer.image_url}}</div>
-    <div>tagline:   {{beer.tagline  }}</div>
-    <div>description:   {{beer.description}}</div>
-    <div>food_pairing  :</div>
-    <div ng-repeat="dish in beer.food_pairing" ng-click="$ctrl.recipeSearch(dish)">{{dish}}</div>
-    <div>abv  : {{beer.abv  }}</div>
-    <div>ebc: {{beer.ebc}}</div>
-    <div>ibu:   {{beer.ibu  }}</div>
-    <div>srm   : {{beer.srm   }}</div> -->
+  <collapsible-item ng-repeat="recipe in $ctrl.recipes" item-title={{recipe.recipeName}}>
+    <div>id:   {{recipe.id}}</div> <!--ng-click="$ctrl.recipeSearch({{recipe.id}})"-->
+    <div>rating: {{recipe.rating}}</div>
+    <div>smallImageUrl:     {{recipe.smallImageUrl}}</div>
+    <div>totalTimeInSeconds:    {{recipe.totalTimeInSecondsl}}</div>
   </collapsible-item>
 </ang-accordion>
+
+
+<!-- <div>tagline:   {{beer.tagline  }}</div>
+<div>food_pairing  :</div>
+<div ng-repeat="dish in beer.food_pairing" ng-click="$ctrl.recipeSearch(dish)">{{dish}}</div>
+<div>abv  : {{beer.abv  }}</div>
+<div>ebc: {{beer.ebc}}</div>
+<div>ibu:   {{beer.ibu  }}</div>
+<div>srm   : {{beer.srm   }}</div> -->

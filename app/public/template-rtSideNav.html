@@ -8,8 +8,8 @@
         <p>
           Developers can also disable the backdrop of the sidenav.<br> This will disable the functionality to click outside to close the sidenav.
         </p>
-        <recipe-list recipes="$ctrl.recipes"></recipe-list>
-        {{$ctrl.recipes | json}}
+        <recipe-list recipes="$ctrl.recipesService.recipes"></recipe-list>
+        <!-- {{$ctrl.recipes | json}} -->
         <div>
           <md-button ng-click="$ctrl.toggleLeft()" class="md-raised">
             Toggle Right Sidenav
@@ -19,7 +19,7 @@
       </div>
     </md-content>
 
-    <md-sidenav class="md-sidenav-right" md-component-id="right" md-disable-backdrop="" md-whiteframe="4">
+    <md-sidenav class="md-sidenav-right" md-component-id="right" md-disable-backdrop="" md-whiteframe="4" md-is-locked-open="$ctrl.rightSideNavOpen">
       <md-toolbar class="md-theme-indigo">
         <h1 class="md-toolbar-tools">Food Search</h1>
       </md-toolbar>

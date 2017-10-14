@@ -1,16 +1,17 @@
 angular.module('app')
   .component('rightSideNav', {
-    controller: function($mdSidenav, $http, recipes) {
+    controller: ['$mdSidenav', '$http', 'recipes', function($mdSidenav, $http, recipes) {
       const vm = this;
       vm.toggleLeft = buildToggler('right');
       //  vm.toggleRight = buildToggler('right');
 
       vm.$onInit = function(){
-        vm.recipes = recipes;
+        vm.recipesService = recipes;
       }
       function buildToggler(componentId) {
         return function() {
           $mdSidenav(componentId).toggle();
+          vm.rightSideNavOpen = !vm.rightSideNavOpen;
         };
       }
       vm.foodSearch = function() {
@@ -42,7 +43,7 @@ angular.module('app')
           // console.log(vm.data);
         });
       }
-    },
+    }],
     templateUrl: 'template-rtSideNav.html'
   })
 
