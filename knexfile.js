@@ -9,8 +9,8 @@ module.exports = {
     client: 'pg',
     connection: 'postgres://localhost/beer_plus_food_v2'
   }
-  // production: {
-  //   client: 'pg',
-  //   connection: process.env.DATABASE_URL
-  // }
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL
+  }
 };
